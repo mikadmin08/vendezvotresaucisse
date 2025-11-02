@@ -1,10 +1,58 @@
 $headerbg: #0D4F78;
+$primary-color: #E87524;
+$secondary-color: #f8f9fc;
 
 body {
     margin: 0;
     padding: 0;
 }
 
+h4{
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    padding: 0;
+    margin: 0;
+}
+
+ul li{
+    margin: 0;
+    padding: 0;
+}
+
+.top-blue-saucisse-container{
+    background-color: $headerbg;
+    display: flex;
+    flex-direction: column;
+    padding-left: 200px;
+}
+
+.saucisse-home{
+    &.title{
+        margin-top: 40px;
+        font-size: 48px;
+        text-align: left;
+        color: $secondary-color;
+    }
+    &.list{
+        padding: 20px 30px 0 20px;
+        color: $secondary-color;
+        font-size: 32px;
+        list-style-type: none;
+        & li i{
+            font-size: 32px;        
+        }
+    }
+    &.hero{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+
+}
 
 .header {
     background-color: $headerbg;
