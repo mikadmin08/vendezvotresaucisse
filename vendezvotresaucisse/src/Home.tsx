@@ -18,13 +18,17 @@ export const Home = () => {
                 </div>
             </div>
             <div className='saucisse-home caca'>
-            <Estimation />
+                <Estimation />
+            </div>
+            <hr />
+            <div className='suggestion'>
+
+            <h4 className='suggestion title'>Rejoignez les 4 millions de clients qui nous ont déjà vendu leur saucisses</h4>
+
+                <Suggestion />
             </div>
             <hr />
 
-            <h4 className='suggestion-title'>Rejoignez les 4 millions de clients qui nous ont déjà vendu leur saucisses</h4>
-            
-            <Suggestion />
         </>
 
     )

@@ -11,29 +11,40 @@ body {
     overflow-x: hidden;
 }
 
-h4{
+h4 {
     padding: 0;
     margin: 0;
 }
 
-h1{
+h1 {
     padding: 0;
     margin: 0;
 }
 
-ul li{
+ul li {
     margin: 0 !important;
     padding: 0;
 }
 
-.suggestion-title{
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: $headerbg;
-    text-align: center;
+.suggestion {
+    width: 50rem;
+    margin: auto;
+
+    &.title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: $headerbg;
+        text-align: center;
+    }
+
+    .p-carousel-prev,
+    .p-carousel-next {
+        display: none !important;
+    }
+
 }
 
-.top-blue-saucisse-container{
+.top-blue-saucisse-container {
     background-color: $headerbg;
     display: flex;
     flex-direction: column;
@@ -41,54 +52,61 @@ ul li{
     padding-bottom: 10rem;
 }
 
-.saucisse-home{
-    &.button-validation{
+.saucisse-home {
+    &.button-validation {
         margin-top: 1rem;
     }
-    &.caca{
+
+    &.caca {
         position: relative;
         top: -100px;
     }
-    &.title{
+
+    &.title {
         margin-top: 40px;
         font-size: 48px;
         text-align: left;
         color: $secondary-color;
     }
-    &.list{
+
+    &.list {
         color: $secondary-color;
         font-size: 32px;
         list-style-type: none;
         padding-inline-start: 0px;
-        & li i{
-            font-size: 32px;    
-            padding: 1rem;    
+
+        & li i {
+            font-size: 32px;
+            padding: 1rem;
         }
     }
-    &.hero{
+
+    &.hero {
         display: flex;
         justify-content: left;
         align-items: center;
     }
-    &.card{
+
+    &.card {
         width: 70rem;
         margin: auto;
-    color: $headerbg;
-     &.card-body{
-        width: 20rem;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        gap:0.5rem
-     }
-    }
-    }
+        color: $headerbg;
 
-    .p-card-title{
-        font-size: 3rem;
-        text-align: center;
-        padding: 2rem;
+        &.card-body {
+            width: 20rem;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem
+        }
     }
+}
+
+.p-card-title {
+    font-size: 3rem;
+    text-align: center;
+    padding: 2rem;
+}
 
 .header {
     background-color: $headerbg;
@@ -108,6 +126,7 @@ ul li{
         justify-content: center;
         align-items: center;
         height: 100%;
+
         & button {
             background-color: transparent;
             border: none;
@@ -115,6 +134,7 @@ ul li{
             width: 15%;
             height: 100%;
             cursor: pointer;
+
             &:hover {
                 background-color: #fff;
                 height: 100%;
@@ -133,6 +153,7 @@ ul li{
 
     & p {
         font-size: 60px;
+
         & span {
             color: #E87524;
         }

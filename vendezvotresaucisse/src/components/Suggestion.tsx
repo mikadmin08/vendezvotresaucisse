@@ -11,8 +11,8 @@ export default function Suggestion() {
             <div className="suggestion-item">
                 <div style={{ textAlign: 'center' }}>
                     <Image src={item.image} alt={item.title} width='500' preview={false} />
-                    <h3 style={{ margin: '0.25rem 0', fontSize: '1rem' }}>{item.title}</h3>
-                    <p style={{ margin: 0, color: '#666', fontSize: '0.875rem' }}>{item.description}</p>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
                 </div>
             </div>
         );
@@ -25,12 +25,7 @@ export default function Suggestion() {
                 value={products}
                 numVisible={1}
                 numScroll={1}
-                circular
-                showIndicators
-                indicatorsContentClassName="flex gap-1 mt-2"
-                pt={{
-                    indicator: { className: 'w-2 h-2' }
-                }}
+                showIndicators={false}
                 itemTemplate={itemTemplate}
             />
         </>
