@@ -22,7 +22,7 @@ export const Home = () => {
             </div>
             <hr />
 
-            <h4>Rejoignez les 4 millions de clients qui nous ont déjà vendu leur saucisses</h4>
+            <h4 className='suggestion-title'>Rejoignez les 4 millions de clients qui nous ont déjà vendu leur saucisses</h4>
             
             <Suggestion />
         </>

@@ -3,13 +3,14 @@ import { Image } from 'primereact/image';
 import suggestions from '../data/suggestions.json'
 
 export default function Suggestion() {
+    // mettre des images qui font la meme taille
     const products = suggestions || [];
 
     const itemTemplate = (item: any) => {
         return (
-            <div className="suggestion-item" style={{ padding: '0.5rem 0' }}>
-                <div style={{ textAlign: 'center', margin: '0 auto' }}>
-                    <Image src={item.image} alt={item.title}  width='500' preview={false} />
+            <div className="suggestion-item">
+                <div style={{ textAlign: 'center' }}>
+                    <Image src={item.image} alt={item.title} width='500' preview={false} />
                     <h3 style={{ margin: '0.25rem 0', fontSize: '1rem' }}>{item.title}</h3>
                     <p style={{ margin: 0, color: '#666', fontSize: '0.875rem' }}>{item.description}</p>
                 </div>
@@ -20,7 +21,7 @@ export default function Suggestion() {
     return (
         <>
             <Carousel
-                {...{ autoplay: true, autoplayInterval: 3000 } as any}
+                autoplayInterval={3000}
                 value={products}
                 numVisible={1}
                 numScroll={1}
@@ -32,6 +33,6 @@ export default function Suggestion() {
                 }}
                 itemTemplate={itemTemplate}
             />
-        </>  
+        </>
     )
 }

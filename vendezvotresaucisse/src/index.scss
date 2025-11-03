@@ -26,9 +26,13 @@ ul li{
     padding: 0;
 }
 
-.dropdown{
-
+.suggestion-title{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: $headerbg;
+    text-align: center;
 }
+
 .top-blue-saucisse-container{
     background-color: $headerbg;
     display: flex;
