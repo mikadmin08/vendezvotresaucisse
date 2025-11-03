@@ -2,9 +2,13 @@ $headerbg: #0D4F78;
 $primary-color: #E87524;
 $secondary-color: #f8f9fc;
 
+@import url('./home.scss');
+
+
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 h4{
@@ -18,18 +22,29 @@ h1{
 }
 
 ul li{
-    margin: 0;
+    margin: 0 !important;
     padding: 0;
 }
 
+.dropdown{
+
+}
 .top-blue-saucisse-container{
     background-color: $headerbg;
     display: flex;
     flex-direction: column;
     padding-left: 200px;
+    padding-bottom: 10rem;
 }
 
 .saucisse-home{
+    &.button-validation{
+        margin-top: 1rem;
+    }
+    &.caca{
+        position: relative;
+        top: -100px;
+    }
     &.title{
         margin-top: 40px;
         font-size: 48px;
@@ -37,22 +52,39 @@ ul li{
         color: $secondary-color;
     }
     &.list{
-        padding: 20px 30px 0 20px;
         color: $secondary-color;
         font-size: 32px;
         list-style-type: none;
+        padding-inline-start: 0px;
         & li i{
-            font-size: 32px;        
+            font-size: 32px;    
+            padding: 1rem;    
         }
     }
     &.hero{
-        margin-top: 20px;
         display: flex;
+        justify-content: left;
         align-items: center;
-        gap: 50px;
+    }
+    &.card{
+        width: 70rem;
+        margin: auto;
+    color: $headerbg;
+     &.card-body{
+        width: 20rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap:0.5rem
+     }
+    }
     }
 
-}
+    .p-card-title{
+        font-size: 3rem;
+        text-align: center;
+        padding: 2rem;
+    }
 
 .header {
     background-color: $headerbg;
