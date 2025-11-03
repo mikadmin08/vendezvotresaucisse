@@ -24,16 +24,21 @@ body {
         justify-content: center;
         align-items: center;
         height: 100%;
-        & button {
+        & .nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
             background-color: transparent;
             border: none;
             color: #fff;
             width: 15%;
-            height: 100%;
+            text-decoration: none;
             cursor: pointer;
-            &:hover {
+            border-top: 4px solid #0D4F78;
+
+            &:hover, &.active {
                 background-color: #fff;
-                height: 100%;
                 color: #E87524;
                 border-top: 4px solid #E87524;
             }
