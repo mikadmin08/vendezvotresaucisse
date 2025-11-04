@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "image": "https://www.tompress.com/img/ybc_blog/post/recsaupar.jpg",
+    "title": "Saucisse artisanale",
+    "description": "Saucisse fumée, recette traditionnelle."
+  },
+  {
+    "id": 2,
+    "image": "https://img.cuisineaz.com/1280x720/2024/11/03/i201846-saucisse-de-porc-a-l-ail.webp",
+    "title": "Saucisse de campagne",
+    "description": "Texture ferme, goût relevé."
+  },
+  {
+    "id": 3,
+    "image": "https://www.maison-garcia.fr/images/com_hikashop/upload/garcia-8504.jpg",
+    "title": "Saucisse aux herbes",
+    "description": "Aromatiques fines, herbes fraîches."
+  },
+  {
+    "id": 4,
+    "image": "https://www.stoeffler.com/app/uploads/2019/02/saucisse-viande-photo-800x533.jpg",
+    "title": "Saucisse grillée",
+    "description": "Parfaite pour barbecues et apéros."
+  },
+  {
+    "id": 5,
+    "image": "https://epicier.ca/wp-content/uploads/2020/06/saucisse-bbq-e1699022737962.jpg",
+    "title": "Saucisse épicée",
+    "description": "Un coup de chaud pour les papilles."
+  },
+  {
+    "id": 6,
+    "image": "https://assets.afcdn.com/recipe/20170602/23375_w1024h576c1cx2460cy1640.webp",
+    "title": "Saucisse gourmet",
+    "description": "Ingrédients sélectionnés, goût raffiné."
+  }
+]

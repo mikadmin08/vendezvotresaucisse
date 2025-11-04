@@ -1,4 +1,9 @@
 $headerbg: #0D4F78;
+$primary-color: #E87524;
+$secondary-color: #f8f9fc;
+
+@import url('./home.scss');
+
 
 @font-face {
     font-family: 'Roobert';
@@ -59,6 +64,7 @@ body {
 
     & p {
         font-size: 60px;
+
         & span {
             color: #E87524;
         }
