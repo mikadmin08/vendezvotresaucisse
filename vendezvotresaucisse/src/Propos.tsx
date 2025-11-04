@@ -2,6 +2,7 @@ import TwitchEmbed from "./TwitchEmbed";
 import PPTwitch from "./assets/pptwitch.png";
 import PPComma from "./assets/ppcomma.png";
 import PPKhouma from "./assets/ppkhouma.png";
+import { Avatar } from 'primereact/avatar';
 
 export const Propos = () => {
     return (
@@ -9,7 +10,7 @@ export const Propos = () => {
             <section className="context">
                 <h1>Contexte du site</h1>
                 <p>
-                    Ce site est une parodie évidente du site <span>vendezvotrevoiture.fr</span>. <br/>
+                    Ce site est une parodie du site <span>vendezvotrevoiture.fr</span>. <br/>
                     Cela prends place au sein de la communauté de la streameuse de EosCall__, qui permet à ses viewers, 
                     en échange de points de chaine, de diffuser de fausses pubs. Parmi celles-ci, une en particulier fait référence au site original
                     remplacant les voitures par des saucisses.
@@ -21,7 +22,7 @@ export const Propos = () => {
                     <div className="description">
                         <img src={PPTwitch} alt="pptwitch"/>
                         <div>
-                            <h1>EosCall__</h1>
+                            <h1 className="twitch-name">EosCall__</h1>
                             <a href="https://www.twitch.tv/eoscall__">Lien vers la chaîne</a>
                         </div>
                     </div>
@@ -35,13 +36,15 @@ export const Propos = () => {
             </section>
             <section className="developers">
                 <h1>Les développeurs</h1>
-                <div>
-                    <img src={PPComma} alt="comma-pp"/>
-                    <span>Comma</span>
-                </div>
-                <div>
-                    <img src={PPKhouma} alt="khouma-pp"/>
-                    <span>Khouma</span>
+                <div className="profiles">
+                    <div className="profiledev">
+                        <Avatar image={PPComma} size="large" shape="circle" />
+                        <span>Comma</span>
+                    </div>
+                    <div className="profiledev">
+                        <Avatar image={PPKhouma} size="large" shape="circle" />
+                        <span>Khouma</span>
+                    </div>
                 </div>
             </section>
         </div>
