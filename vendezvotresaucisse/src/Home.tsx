@@ -4,7 +4,7 @@ import Suggestion from './components/Suggestion';
 export const Home = () => {
 
     return (
-        <>
+        <div className='home-container'>
             <div className="top-blue-saucisse-container">
                 <h4 className="saucisse-home title">Combien vaut votre Saucisse ?</h4>
                 <div className='saucisse-home hero'>
@@ -28,9 +28,7 @@ export const Home = () => {
                 <Suggestion />
             </div>
             <hr />
-
-        </>
-
+        </div>
     )
 }
 
