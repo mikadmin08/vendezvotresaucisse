@@ -5,107 +5,15 @@ $secondary-color: #f8f9fc;
 @import url('./home.scss');
 
 
+@font-face {
+    font-family: 'Roobert';
+    src: url('./assets/fonts/RoobertTRIALVF-BF67243fd545701.ttf')
+}
+
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-}
-
-h4 {
-    padding: 0;
-    margin: 0;
-}
-
-h1 {
-    padding: 0;
-    margin: 0;
-}
-
-ul li {
-    margin: 0 !important;
-    padding: 0;
-}
-
-.suggestion {
-    width: 50rem;
-    margin: auto;
-
-    &.title {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-        color: $headerbg;
-        text-align: center;
-    }
-
-    .p-carousel-prev,
-    .p-carousel-next {
-        display: none !important;
-    }
-
-}
-
-.top-blue-saucisse-container {
-    background-color: $headerbg;
-    display: flex;
-    flex-direction: column;
-    padding-left: 200px;
-    padding-bottom: 10rem;
-}
-
-.saucisse-home {
-    &.button-validation {
-        margin-top: 1rem;
-    }
-
-    &.caca {
-        position: relative;
-        top: -100px;
-    }
-
-    &.title {
-        margin-top: 40px;
-        font-size: 48px;
-        text-align: left;
-        color: $secondary-color;
-    }
-
-    &.list {
-        color: $secondary-color;
-        font-size: 32px;
-        list-style-type: none;
-        padding-inline-start: 0px;
-
-        & li i {
-            font-size: 32px;
-            padding: 1rem;
-        }
-    }
-
-    &.hero {
-        display: flex;
-        justify-content: left;
-        align-items: center;
-    }
-
-    &.card {
-        width: 70rem;
-        margin: auto;
-        color: $headerbg;
-
-        &.card-body {
-            width: 20rem;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem
-        }
-    }
-}
-
-.p-card-title {
-    font-size: 3rem;
-    text-align: center;
-    padding: 2rem;
+    font-family:'Roobert', 'Courier New', Courier, monospace;
 }
 
 .header {
@@ -126,18 +34,21 @@ ul li {
         justify-content: center;
         align-items: center;
         height: 100%;
-
-        & button {
+        & .nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
             background-color: transparent;
             border: none;
             color: #fff;
             width: 15%;
-            height: 100%;
+            text-decoration: none;
             cursor: pointer;
+            border-top: 4px solid #0D4F78;
 
-            &:hover {
+            &:hover, &.active {
                 background-color: #fff;
-                height: 100%;
                 color: #E87524;
                 border-top: 4px solid #E87524;
             }
@@ -156,6 +67,114 @@ ul li {
 
         & span {
             color: #E87524;
+        }
+    }
+}
+
+.apropos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    & .context {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0D4F78;
+            height: 200px;
+            font-size: 3rem;
+            margin: 0;
+            color: #FFF;
+            width: 100vw;
+        }
+
+        & p {
+            font-size: 2.2rem;
+            text-align:center;
+            width: 50%; 
+        }
+
+        & span {
+            font-size: 2.2rem;
+        }
+    }
+
+    & .streamer {
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+
+        & h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0D4F78;
+            height: 200px;
+            font-size: 3rem;
+            margin: 0;
+            color: #FFF;
+            width: 100vw;
+        }
+
+        & .presentation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            width: 100vw;
+            height: 206px;
+
+            & p {
+                font-size: 30px;
+                width: 40vw;
+            }
+
+            & .description {
+                display: flex;
+                justify-content: center;
+                margin-right: 50px;
+            
+                & img {
+                    width: 200px;
+                    border-radius: 50%;
+                    margin-right: 30px;
+                    border: 6px solid #F8AB00;
+                }
+
+                & div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    & h1 {
+                        margin: 0;
+                    }
+
+                    & a {
+                        text-decoration: none;
+                        font-weight: bold;
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }    
+
+    & .developers {
+        display: flex;
+        height: 500px;
+
+        & img {
+            width: 200px;
+            border-radius: 50%;
+            margin-right: 30px;
+            border: 6px solid #F8AB00;
         }
     }
 }

@@ -8,9 +8,7 @@ import 'primereact/resources/primereact.min.css'
 import 'primeicons/primeicons.css'
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
     <HashRouter>
       <App />
     </HashRouter>
-  </StrictMode>,
 )
