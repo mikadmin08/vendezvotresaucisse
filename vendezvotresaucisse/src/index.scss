@@ -1,10 +1,15 @@
 $headerbg: #0D4F78;
 
+@font-face {
+    font-family: 'Roobert';
+    src: url('./assets/fonts/RoobertTRIALVF-BF67243fd545701.ttf')
+}
+
 body {
     margin: 0;
     padding: 0;
+    font-family:'Roobert', 'Courier New', Courier, monospace;
 }
-
 
 .header {
     background-color: $headerbg;
@@ -65,30 +70,100 @@ body {
     flex-direction: column;
     justify-content: space-around;
 
-    & .presentation {
+    & .context {
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        font-size: 30px;
-        width: 100vw;
-        height: 206px;
-
-        & .description {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+        align-items: center;
 
         & h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0D4F78;
+            height: 200px;
+            font-size: 3rem;
             margin: 0;
+            color: #FFF;
+            width: 100vw;
         }
 
-        & a {
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 20px;;
+        & p {
+            font-size: 2.2rem;
+            text-align:center;
+            width: 50%; 
         }
 
-        
+        & span {
+            font-size: 2.2rem;
+        }
+    }
+
+    & .streamer {
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+
+        & h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0D4F78;
+            height: 200px;
+            font-size: 3rem;
+            margin: 0;
+            color: #FFF;
+            width: 100vw;
+        }
+
+        & .presentation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            width: 100vw;
+            height: 206px;
+
+            & p {
+                font-size: 30px;
+                width: 40vw;
+            }
+
+            & .description {
+                display: flex;
+                justify-content: center;
+                margin-right: 50px;
+            
+                & img {
+                    width: 200px;
+                    border-radius: 50%;
+                    margin-right: 30px;
+                    border: 6px solid #F8AB00;
+                }
+
+                & div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    & h1 {
+                        margin: 0;
+                    }
+
+                    & a {
+                        text-decoration: none;
+                        font-weight: bold;
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }    
+
+    & .developers {
+        display: flex;
+        height: 500px;
+
         & img {
             width: 200px;
             border-radius: 50%;
@@ -96,5 +171,4 @@ body {
             border: 6px solid #F8AB00;
         }
     }
-
 }
