@@ -1,4 +1,4 @@
-import TwitchEmbed from "./TwitchEmbed";
+import TwitchEmbed from "../../TwitchEmbed";
 import PPTwitch from "./assets/pptwitch.png";
 import PPComma from "./assets/ppcomma.png";
 import PPKhouma from "./assets/ppkhouma.png";

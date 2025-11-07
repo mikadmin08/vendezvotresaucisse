@@ -1,9 +1,9 @@
 import {Route, Routes} from "react-router";
-import { Acheter } from "./Acheter";
-import { Estimer } from "./Estimer";
-import {Vendre} from "./Vendre";
-import { Header } from "./Header";
-import { Propos } from "./Propos";
+import { Acheter } from "./pages/Acheter/Acheter";
+import { Estimer } from "./pages/Estimer/Estimer";
+import {Vendre} from "./pages/Vendre/Vendre";
+import { Header } from "./components/Header";
+import { Propos } from "./pages/Propos/Propos";
 import {Home} from "./Home";
 
 function App() {
