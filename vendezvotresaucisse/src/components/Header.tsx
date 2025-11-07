@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import { useNavigate, Link } from "react-router"
-import Logo from "./assets/logo.png";
-import "./index.scss";
+import Logo from "../assets/logo.png";
+import "../index.scss";
 
 export const Header = () => {
     const navigate = useNavigate();

@@ -1,0 +1,141 @@
+.apropos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    & .context {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0D4F78;
+            height: 200px;
+            font-size: 3rem;
+            margin: 0;
+            color: #FFF;
+            width: 100vw;
+        }
+
+        & p {
+            font-size: 2.2rem;
+            text-align: justify;
+            width: 40%; 
+        }
+
+        & span {
+            font-size: 2.2rem;
+        }
+    }
+
+    & .streamer {
+        display: flex;
+        flex-direction: column;
+
+        & #twitch-embed {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        & h1:not(.twitch-name) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0D4F78;
+            height: 200px;
+            font-size: 3rem;
+            margin: 0;
+            color: #FFF;
+            width: 100vw;
+        }
+
+        & .presentation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            width: 100vw;
+            height: 300px;
+            margin: 50px 0 50px 0;
+
+            & p {
+                font-size: 2.2rem;
+                width: 45vw;
+            }
+
+            & .description {
+                display: flex;
+                justify-content: center;
+                margin-right: 50px;
+            
+                & img {
+                    width: 200px;
+                    border-radius: 50%;
+                    margin-right: 30px;
+                    border: 6px solid #F8AB00;
+                }
+
+                & div {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    & h1 {
+                        margin: 0;
+                    }
+
+                    & a {
+                        text-decoration: none;
+                        font-weight: bold;
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }    
+
+    & .developers {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & h1 {
+            display: flex;
+            padding-left: 2rem;
+            align-items: center;
+            background-color: #0D4F78;
+            height: 200px;
+            font-size: 3rem;
+            margin: 0;
+            color: #FFF;
+            width: 100vw;
+        }
+
+        & .profiles {
+            display: flex;
+            justify-content: space-between;
+            height: 300px;
+            width: 30%;
+
+            & .profiledev {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                & img {
+                    width: 200px;
+                    height: 200px;
+                    border: 3px solid #F8AB00;
+                }
+            }
+        }
+    }
+}
