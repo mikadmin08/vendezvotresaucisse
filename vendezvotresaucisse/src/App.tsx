@@ -24,7 +24,7 @@ function App() {
         <Route path="/propos" element={ <Propos /> }/>
         <Route path="/faq" element={ <FAQ /> }/>
       </Routes>
-      <Footer/>
+      <Footer />
     </>
   )
 }
