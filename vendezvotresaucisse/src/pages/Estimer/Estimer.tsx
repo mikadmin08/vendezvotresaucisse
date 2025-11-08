@@ -2,6 +2,7 @@ import { Divider } from "primereact/divider"
 import Estimation from "../../components/Estimation"
 import ReviewCard from "../../components/ReviewCard"
 import ReasonToSellSaucisse from "../../components/ReasonToSellSaucisse"
+import HowToSellSaucisse from "../../components/HowToSellSaucisse"
 export const Estimer = () => {
     return (
         <>
@@ -18,6 +19,11 @@ export const Estimer = () => {
             <Divider />
             <section className="review-container">
                 <ReasonToSellSaucisse />
+            </section>
+
+            <section className="">
+
+                <HowToSellSaucisse />
             </section>
 
         </>

@@ -70,6 +70,20 @@ body {
     padding-top: 2rem;
 }
 
+.howtosell-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2);
+    grid-column-gap: 4rem;
+    grid-row-gap: 0rem;
+    text-align: center;
+}
+
+.howtosell-list{
+    list-style-type: none;
+    text-decoration: none;
+    text-align: start;
+}
 
 .home-container {
     & h4 {
