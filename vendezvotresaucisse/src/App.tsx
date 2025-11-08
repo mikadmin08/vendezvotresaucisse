@@ -9,6 +9,7 @@ import { CGNV } from "./pages/CGNV/CGNV";
 import { Mentions } from "./pages/Mentions/Mentions";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
+import { Schedular } from "./components/Pubs/Schedular";
 import { Home } from "./Home";
 import "primeicons/primeicons.css";
 
@@ -17,6 +18,7 @@ function App() {
     <>
       <Header />
       <ScrollTop />
+      <Schedular />
       <main>
         <Routes>
           <Route index path="/" element={<Home />} />
