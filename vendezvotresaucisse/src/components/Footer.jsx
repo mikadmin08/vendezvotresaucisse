@@ -1,6 +1,7 @@
 import PPComma from "../assets/ppcomma.png";
 import PPKhouma from "../assets/ppkhouma.png";
 import { Avatar } from "primereact/avatar";
+import LogoMiniature from "../assets/logominia.png";
 import "../index.scss";
 
 export const Footer = () => {
@@ -50,6 +51,9 @@ export const Footer = () => {
             </ul>
           </div>
         </div>
+      </div>
+      <div className="logominia">
+        <img src={LogoMiniature} alt="logominiature" />
       </div>
     </section>
   );
