@@ -114,6 +114,12 @@ body {
         gap: 0.5rem;
       }
     }
+
+    &.estimation-result {
+      text-align: justify;
+      font-size: 1rem;
+      color: $headerbg;
+    }
   }
 
   .p-card-title {
