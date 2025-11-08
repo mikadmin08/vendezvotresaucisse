@@ -1,8 +1,9 @@
 import { Image } from 'primereact/image';
 import Estimation from './components/Estimation';
 import Suggestion from './components/Suggestion';
-export const Home = () => {
 
+
+export const Home = () => {
     return (
         <div className='home-container'>
             <div className="top-blue-saucisse-container">

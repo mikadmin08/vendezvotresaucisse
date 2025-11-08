@@ -26,6 +26,11 @@
         & p {
             font-size: 2.2rem;
             text-align: justify;
+            padding: 0 3rem;
+
+            & span {
+                color: #E87524;
+            }
         }
 
         & span {
@@ -37,6 +42,7 @@
         grid-area: 2 / 2 / 3 / 3;
         display: flex;
         flex-direction: column;
+        padding: 0 0 2rem 0;
 
         & #twitch-embed {
             display: flex;
@@ -59,14 +65,16 @@
 
         & .presentation {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             font-size: 2rem;
-            height: 300px;
+            height: auto;
             margin: 50px 0 50px 0;
 
             & p {
                 font-size: 2.2rem;
+                padding: 0 3rem;
             }
 
             & .description {
