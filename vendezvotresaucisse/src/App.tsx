@@ -10,8 +10,18 @@ import { Mentions } from "./pages/Mentions/Mentions";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Schedular } from "./components/Pubs/Schedular";
+import { KonamiGate } from "./components/Konami/KonamiGate";
 import { Home } from "./Home";
 import "primeicons/primeicons.css";
+
+function EasterEgg() {
+  window.open(
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "_blank",
+    "noopener,noreferrer"
+  );
+  return <></>;
+}
 
 function App() {
   return (
@@ -19,6 +29,9 @@ function App() {
       <Header />
       <ScrollTop />
       <Schedular />
+      <KonamiGate resetAfterMs={0} enableEnter={false}>
+        <EasterEgg />
+      </KonamiGate>
       <main>
         <Routes>
           <Route index path="/" element={<Home />} />
