@@ -2,9 +2,11 @@ import PPComma from "../assets/ppcomma.png";
 import PPKhouma from "../assets/ppkhouma.png";
 import { Avatar } from "primereact/avatar";
 import LogoMiniature from "../assets/logominia.png";
+import { useNavigate, Link } from "react-router";
 import "../index.scss";
 
 export const Footer = () => {
+  const navigate = useNavigate();
   return (
     <section className="footer">
       <div className="profile_container">
@@ -25,10 +27,10 @@ export const Footer = () => {
             <ul>
               {/* TODO: Mettre à jour les href site */}
               <li>
-                <a href="#">Avis</a>
+                <Link to="avis">Avis</Link>
               </li>
               <li>
-                <a href="#">Questions trop fréquentes</a>
+                <Link to="faq" onClick={()=>navigate("/faq")}>Questions trop fréquentes</Link>
               </li>
             </ul>
           </div>
@@ -37,16 +39,16 @@ export const Footer = () => {
             <ul>
               {/* TODO: Mettre à jour les href services */}
               <li>
-                <a href="#">Contact</a>
+                <Link to="contact">Contact</Link>
               </li>
               <li>
-                <a href="#">Conditions Générales de non-vente</a>
+                <Link to="cgnv">Conditions Générales de non-vente</Link>
               </li>
               <li>
-                <a href="#">Mentions illégales</a>
+                <Link to="mentions">Mentions illégales</Link>
               </li>
               <li>
-                <a href="#">Protection des données</a>
+                <Link to="protection">Protection des données</Link>
               </li>
             </ul>
           </div>

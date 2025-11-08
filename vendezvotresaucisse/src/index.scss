@@ -11,7 +11,34 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roobert", "Courier New", Courier, monospace;
-  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+#root > header,
+#root > .header {
+  grid-row: 1;
+}
+#root > main {
+  grid-row: 2;
+  min-height: 0;
+}
+#root > footer,
+#root > .footer {
+  grid-row: 3;
+}
+
+main {
+  min-height: 0; // prend la place dispo
+}
+
+html,
+body {
+  height: 100%;
 }
 
 .home-container {
@@ -135,6 +162,7 @@ body {
   grid-template-columns: 30% 1fr 30%;
   justify-content: center;
   align-items: center;
+  height: 5vh;
 
   img {
     grid-area: 1 / 1 / 1 / 2;
@@ -176,7 +204,6 @@ body {
   grid-template-columns: 30vw 40vw 30vw;
   background-color: #4a4a4a;
   color: #fff;
-  height: 15rem;
 
   & .footer-info {
     display: grid;
