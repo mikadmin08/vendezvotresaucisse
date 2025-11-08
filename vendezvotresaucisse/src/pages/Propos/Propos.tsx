@@ -1,8 +1,5 @@
 import TwitchEmbed from "../../TwitchEmbed";
 import PPTwitch from "../../assets/pptwitch.png";
-import PPComma from "../../assets/ppcomma.png";
-import PPKhouma from "../../assets/ppkhouma.png";
-import { Avatar } from 'primereact/avatar';
 import "./index.scss";
 
 export const Propos = () => {
@@ -22,9 +19,14 @@ export const Propos = () => {
                 <div className="presentation">
                     <div className="description">
                         <img src={PPTwitch} alt="pptwitch"/>
-                        <div>
+                        <div className="profile">
                             <h1 className="twitch-name">EosCall__</h1>
-                            <a href="https://www.twitch.tv/eoscall__">Lien vers la chaîne</a>
+                            <div>
+                                <a href="https://www.twitch.tv/eoscall__" target="_blank"><i className="pi pi-twitch" style={{ fontSize: '2.5rem', color: '#954CFF' }}></i></a>
+                                <a href="https://www.tiktok.com/@eoscall" target="_blank"><i className="pi pi-tiktok" style={{ fontSize: '2.5rem' }}></i></a>
+                                <a href="https://www.youtube.com/@EosCall" target="_blank"><i className="pi pi-youtube" style={{ fontSize: '2.5rem', color: '#FF0033' }}></i></a>
+                                <a href="https://x.com/EosCall" target="_blank"><i className="pi pi-twitter" style={{ fontSize: '2.5rem' }}></i></a>
+                            </div>
                         </div>
                     </div>
                     <p>
@@ -34,19 +36,6 @@ export const Propos = () => {
                     </p>
                 </div>
                 <TwitchEmbed/>
-            </section>
-            <section className="developers">
-                <h1>Les développeurs</h1>
-                <div className="profiles">
-                    <div className="profiledev">
-                        <Avatar image={PPComma} size="large" shape="circle" />
-                        <span>Comma</span>
-                    </div>
-                    <div className="profiledev">
-                        <Avatar image={PPKhouma} size="large" shape="circle" />
-                        <span>Khouma</span>
-                    </div>
-                </div>
             </section>
         </div>
     )

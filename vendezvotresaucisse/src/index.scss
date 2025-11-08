@@ -153,3 +153,10 @@ body {
         }
     }
 }
+
+.footer {
+    display: grid;
+    grid-template-columns: 20vw 60vw 20vw;
+    background-color: #4A4A4A;
+    color: #FFF;
+}
