@@ -25,7 +25,7 @@ export const Footer = () => {
           <div className="site">
             <h4>vendezvotresaucisse.fr</h4>
             <ul>
-              {/* TODO: Mettre à jour les href site */}
+              {/* TODO: Faire la page Avis */}
               <li>
                 <Link to="avis">Avis</Link>
               </li>
@@ -39,15 +39,15 @@ export const Footer = () => {
           <div className="services">
             <h4>Service clients</h4>
             <ul>
-              {/* TODO: Mettre à jour les href services */}
               <li>
-                <Link to="cgnv">Conditions Générales de non-vente</Link>
+                <Link to="cgnv" onClick={() => navigate("/cgnv")}>
+                  Conditions Générales de non-vente
+                </Link>
               </li>
               <li>
-                <Link to="mentions">Mentions illégales</Link>
-              </li>
-              <li>
-                <Link to="protection">Protection des données</Link>
+                <Link to="mentions" onClick={() => navigate("/mentions")}>
+                  Mentions illégales
+                </Link>
               </li>
             </ul>
           </div>
