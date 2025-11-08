@@ -1,156 +1,153 @@
 .apropos {
-    display: grid;
-    grid-template-columns: 15vw 70vw 15vw;
+  display: grid;
+  grid-template-columns: 15vw 70vw 15vw;
+  flex-direction: column;
+  justify-content: space-around;
+
+  & .context {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 
-    & .context {
-        grid-area: 1 / 2 / 2 / 3;
+    & h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #0d4f78;
+      height: 200px;
+      font-size: 2.5rem;
+      margin: 0;
+      color: #fff;
+      width: 100%;
+    }
+
+    & p {
+      font-size: 1.8rem;
+      text-align: justify;
+      padding: 0 3rem;
+
+      & span {
+        color: #e87524;
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  & .streamer {
+    grid-area: 2 / 2 / 3 / 3;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 2rem 0;
+
+    & #twitch-embed {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    & h1:not(.twitch-name) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #0d4f78;
+      height: 200px;
+      font-size: 2.5rem;
+      margin: 0;
+      color: #fff;
+      width: 100%;
+    }
+
+    & .presentation {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      height: auto;
+      margin: 50px 0 50px 0;
+
+      & p {
+        font-size: 1.8rem;
+        padding: 0 3rem;
+      }
+
+      & .description {
+        display: flex;
+        justify-content: center;
+        margin-right: 50px;
+
+        & img {
+          width: 200px;
+          border-radius: 50%;
+          margin-right: 30px;
+          border: 6px solid #f8ab00;
+        }
+
+        & .profile {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          & h1 {
+            margin: 0;
+          }
+
+          & div {
+            display: flex;
+            justify-content: space-around;
+
+            & a {
+              text-decoration: none;
+              font-weight: bold;
+              font-size: 1.8rem;
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & .developers {
+    grid-area: 3 / 2 / 4 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & h1 {
+      display: flex;
+      padding-left: 2rem;
+      align-items: center;
+      background-color: #0d4f78;
+      height: 200px;
+      font-size: 3rem;
+      margin: 0;
+      color: #fff;
+      width: 100%;
+    }
+
+    & .profiles {
+      display: flex;
+      justify-content: space-between;
+      height: 300px;
+      width: 30%;
+
+      & .profiledev {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        & h1 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #0D4F78;
-            height: 200px;
-            font-size: 3rem;
-            margin: 0;
-            color: #FFF;
-            width: 100%;
+        & img {
+          width: 200px;
+          height: 200px;
+          border: 3px solid #f8ab00;
         }
-
-        & p {
-            font-size: 2.2rem;
-            text-align: justify;
-            padding: 0 3rem;
-
-            & span {
-                color: #E87524;
-            }
-        }
-
-        & span {
-            font-size: 2.2rem;
-        }
+      }
     }
-
-    & .streamer {
-        grid-area: 2 / 2 / 3 / 3;
-        display: flex;
-        flex-direction: column;
-        padding: 0 0 2rem 0;
-
-        & #twitch-embed {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        & h1:not(.twitch-name) {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #0D4F78;
-            height: 200px;
-            font-size: 3rem;
-            margin: 0;
-            color: #FFF;
-            width: 100%;
-        }
-
-        & .presentation {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-size: 2rem;
-            height: auto;
-            margin: 50px 0 50px 0;
-
-            & p {
-                font-size: 2.2rem;
-                padding: 0 3rem;
-            }
-
-            & .description {
-                display: flex;
-                justify-content: center;
-                margin-right: 50px;
-            
-                & img {
-                    width: 200px;
-                    border-radius: 50%;
-                    margin-right: 30px;
-                    border: 6px solid #F8AB00;
-                }
-
-                & .profile {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-
-                    & h1 {
-                        margin: 0;
-                    }
-
-                    & div {
-                        display: flex;
-                        justify-content: space-around;
-
-                        & a {
-                            text-decoration: none;
-                            font-weight: bold;
-                            font-size: 1.8rem;
-                            color: #000;
-                        }
-                    }
-                }
-            }
-        }
-    }    
-
-    & .developers {
-        grid-area: 3 / 2 / 4 / 3;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        & h1 {
-            display: flex;
-            padding-left: 2rem;
-            align-items: center;
-            background-color: #0D4F78;
-            height: 200px;
-            font-size: 3rem;
-            margin: 0;
-            color: #FFF;
-            width: 100%;
-        }
-
-        & .profiles {
-            display: flex;
-            justify-content: space-between;
-            height: 300px;
-            width: 30%;
-
-            & .profiledev {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-
-                & img {
-                    width: 200px;
-                    height: 200px;
-                    border: 3px solid #F8AB00;
-                }
-            }
-        }
-    }
+  }
 }

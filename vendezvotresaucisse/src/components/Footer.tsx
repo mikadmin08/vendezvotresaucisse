@@ -30,7 +30,9 @@ export const Footer = () => {
                 <Link to="avis">Avis</Link>
               </li>
               <li>
-                <Link to="faq" onClick={()=>navigate("/faq")}>Questions trop fréquentes</Link>
+                <Link to="faq" onClick={() => navigate("/faq")}>
+                  Questions trop fréquentes
+                </Link>
               </li>
             </ul>
           </div>
@@ -38,9 +40,6 @@ export const Footer = () => {
             <h4>Service clients</h4>
             <ul>
               {/* TODO: Mettre à jour les href services */}
-              <li>
-                <Link to="contact">Contact</Link>
-              </li>
               <li>
                 <Link to="cgnv">Conditions Générales de non-vente</Link>
               </li>
