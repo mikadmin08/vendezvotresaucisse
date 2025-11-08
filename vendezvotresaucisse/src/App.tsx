@@ -1,7 +1,7 @@
-import {Route, Routes} from "react-router";
+import { Route, Routes } from "react-router";
 import { Acheter } from "./pages/Acheter/Acheter";
 import { Estimer } from "./pages/Estimer/Estimer";
-import {Vendre} from "./pages/Vendre/Vendre";
+import { Vendre } from "./pages/Vendre/Vendre";
 import { Header } from "./components/Header";
 import {Footer} from "./components/Footer";
 import { Propos } from "./pages/Propos/Propos";
@@ -16,13 +16,13 @@ function App() {
       <Header />
       <ScrollTop />
       <Routes>
-        <Route index path="/" element={ <Home /> }/>
-        <Route path="/vendre" element={ <Vendre /> }/>
-        <Route path="/acheter" element={ <Acheter /> }/>
-        <Route path="/estimer" element={ <Estimer /> }/>
-        <Route path="/propos" element={ <Propos /> }/>
+        <Route index path="/" element={<Home />} />
+        <Route path="/vendre" element={<Vendre />} />
+        <Route path="/acheter" element={<Acheter />} />
+        <Route path="/estimer" element={<Estimer />} />
+        <Route path="/propos" element={<Propos />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </>
   )
 }
