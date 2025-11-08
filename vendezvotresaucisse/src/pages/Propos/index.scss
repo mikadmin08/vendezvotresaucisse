@@ -1,9 +1,11 @@
 .apropos {
-    display: flex;
+    display: grid;
+    grid-template-columns: 15vw 70vw 15vw;
     flex-direction: column;
     justify-content: space-around;
 
     & .context {
+        grid-area: 1 / 2 / 2 / 3;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -18,13 +20,12 @@
             font-size: 3rem;
             margin: 0;
             color: #FFF;
-            width: 100vw;
+            width: 100%;
         }
 
         & p {
             font-size: 2.2rem;
             text-align: justify;
-            width: 40%; 
         }
 
         & span {
@@ -33,6 +34,7 @@
     }
 
     & .streamer {
+        grid-area: 2 / 2 / 3 / 3;
         display: flex;
         flex-direction: column;
 
@@ -52,7 +54,7 @@
             font-size: 3rem;
             margin: 0;
             color: #FFF;
-            width: 100vw;
+            width: 100%;
         }
 
         & .presentation {
@@ -60,13 +62,11 @@
             justify-content: center;
             align-items: center;
             font-size: 2rem;
-            width: 100vw;
             height: 300px;
             margin: 50px 0 50px 0;
 
             & p {
                 font-size: 2.2rem;
-                width: 45vw;
             }
 
             & .description {
@@ -81,7 +81,7 @@
                     border: 6px solid #F8AB00;
                 }
 
-                & div {
+                & .profile {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -90,10 +90,16 @@
                         margin: 0;
                     }
 
-                    & a {
-                        text-decoration: none;
-                        font-weight: bold;
-                        font-size: 1.8rem;
+                    & div {
+                        display: flex;
+                        justify-content: space-around;
+
+                        & a {
+                            text-decoration: none;
+                            font-weight: bold;
+                            font-size: 1.8rem;
+                            color: #000;
+                        }
                     }
                 }
             }
@@ -101,6 +107,7 @@
     }    
 
     & .developers {
+        grid-area: 3 / 2 / 4 / 3;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -115,7 +122,7 @@
             font-size: 3rem;
             margin: 0;
             color: #FFF;
-            width: 100vw;
+            width: 100%;
         }
 
         & .profiles {
