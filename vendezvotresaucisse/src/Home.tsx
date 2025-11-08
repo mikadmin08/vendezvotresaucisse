@@ -23,10 +23,12 @@ export const Home = () => {
                 <Estimation />
             </div>
             <Divider />
-            <div className='suggestion'>
-                <h4 className='suggestion title'>Rejoignez les 4 millions de clients qui nous ont déjà vendu leur saucisses</h4>
-                <Suggestion />
-            </div>
+            <section className='suggestion-container'>
+                <div className='suggestion'>
+                    <h4 className='suggestion title'>Rejoignez les 4 millions de clients qui nous ont déjà vendu leur saucisses</h4>
+                    <Suggestion />
+                </div>
+            </section>
             <Divider />
         </div>
     )
