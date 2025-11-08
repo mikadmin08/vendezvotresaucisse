@@ -1,7 +1,8 @@
 import { Image } from 'primereact/image';
 import Estimation from './components/Estimation';
 import Suggestion from './components/Suggestion';
-
+import SaucisseVoiture from './assets/voituresaucisse.png';
+import { Divider } from 'primereact/divider';
 
 export const Home = () => {
     return (
@@ -15,20 +16,18 @@ export const Home = () => {
                         <li><i className="pi pi-check" style={{ fontSize: "1rem", fontWeight: "bold" }}></i>Rapide et facile</li>
                         <li><i className="pi pi-check" style={{ fontSize: "1rem", fontWeight: "bold" }}></i>Obtenez votre prix de vente directement en ligne</li>
                     </ul>
-                    <Image style={{ position: "relative", left: "35%", scale: "2" }} src="https://content.wirkaufendeinauto.de/static/car_images/wkda-white-car-desktop_optimized.webp" alt="Image" preview width="250" />
+                    <Image style={{ position: "relative", left: "25%", scale: "2" }} src={SaucisseVoiture} alt="Image" preview width="250" />
                 </div>
             </div>
             <div className='saucisse-home caca'>
                 <Estimation />
             </div>
-            <hr />
+            <Divider />
             <div className='suggestion'>
-
-            <h4 className='suggestion title'>Rejoignez les 4 millions de clients qui nous ont déjà vendu leur saucisses</h4>
-
+                <h4 className='suggestion title'>Rejoignez les 4 millions de clients qui nous ont déjà vendu leur saucisses</h4>
                 <Suggestion />
             </div>
-            <hr />
+            <Divider />
         </div>
     )
 }
