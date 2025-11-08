@@ -1,7 +1,14 @@
+import Estimation from "../../components/Estimation"
 export const Estimer = () => {
     return (
-        <div className="container">
-            <p><span className="orange">Maintenance</span> en <span className="orange">cours</span></p>
-        </div>
+        <>
+            <div className="home-container">
+                <div className="saucisse-home ">
+                    <Estimation />
+
+                </div>
+            </div>
+
+        </>
     )
 }

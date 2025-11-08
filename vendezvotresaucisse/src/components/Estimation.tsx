@@ -9,6 +9,7 @@ import { Image } from 'primereact/image';
 import saucisseSize from '../assets/saucisse-size.png';
 import { RadioButton } from 'primereact/radiobutton';
 import { GoogleGenAI } from "@google/genai";
+import './estimation.scss';
 
 export default function Estimation() {
 
