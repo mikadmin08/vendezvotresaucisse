@@ -9,5 +9,13 @@ export default defineConfig(({ mode }) => {
     define: {
       'import.meta.env.GEMINI_KEY': JSON.stringify(env.GEMINI_KEY),
     },
+    server: {
+      proxy: {
+        "/api": {
+          target: "http://localhost:3001",
+          changeOrigin: true,
+        },
+      },
+    },
   }
 })

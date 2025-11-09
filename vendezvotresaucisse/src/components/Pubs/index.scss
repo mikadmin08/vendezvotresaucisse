@@ -1,0 +1,49 @@
+.pub-container {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9999;
+  width: 25vw;
+  height: 15vw;
+
+  & .skip-button {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+  }
+
+  & .gif {
+    width: 25vw;
+    height: 15vw;
+  }
+
+  /* Animations */
+  @keyframes slideInUpRight {
+    from {
+      transform: translate(16px, 16px) scale(0.96);
+      opacity: 0;
+    }
+    to {
+      transform: translate(0, 0) scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes slideOutDownRight {
+    from {
+      transform: translate(0, 0) scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: translate(16px, 16px) scale(0.96);
+      opacity: 0;
+    }
+  }
+
+  &.promo-toast--in {
+    animation: slideInUpRight 300ms ease-out both;
+  }
+
+  &.promo-toast--out {
+    animation: slideOutDownRight 300ms ease-in both;
+  }
+}
