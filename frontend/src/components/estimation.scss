@@ -1,24 +1,70 @@
-/* Component-scoped styles for Estimation so it works on any page */
+/* === Text Wavy + Rainbow === */
+@keyframes rainbowShift {
+  0% {
+    background-position: 0% 50%;
+  }
 
-.saucisse-home {
-  &.saucisse-size {
-    text-align: center;
+  50% {
+    background-position: 100% 50%;
+  }
 
-    &.saucisse-selected {
-      display: flex;
-      justify-content: center;
-      gap: 4rem;
-      padding: 1rem;
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes wave {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-4px);
+  }
+
+  75% {
+    transform: translateY(4px);
+  }
+}
+
+.wavy-text {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  background: linear-gradient(270deg,
+      #ff0000,
+      #ff7f00,
+      #ffff00,
+      #00ff00,
+      #0000ff,
+      #4b0082,
+      #8b00ff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowShift 6s linear infinite;
+
+  span {
+    display: inline-block;
+    animation: wave 0.2s ease-in-out infinite;
+  }
+
+  // Décalage progressif pour chaque lettre
+  @for $i from 1 through 120 {
+    span:nth-child(#{$i}) {
+      animation-delay: $i * 0.05s;
     }
   }
+}
 
-  &.button-validation {
-    margin-top: 1rem;
-  }
-
-  &.estimation-result {
-    text-align: justify;
-    font-size: 1rem;
-    color: #0d4f78; /* header bg color */
-  }
+/* Pour qu'il s'intègre bien dans ton bloc résultat */
+.saucisse-home.estimation-result {
+  text-align: justify;
+  font-size: 1rem;
+  color: #0d4f78;
+  padding: 1rem;
 }

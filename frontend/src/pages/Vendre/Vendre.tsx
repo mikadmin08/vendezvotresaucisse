@@ -13,12 +13,12 @@ export const Vendre = () => {
             </div>
 
             <Divider />
-            <section className="review-container">
+            <section className="blue-container">
                 <ReasonToSellSaucisse />
 
             </section>
             <Divider />
-            <section className="review-container">
+            <section className="white-container">
                 <ReviewCard />
 
             </section>
