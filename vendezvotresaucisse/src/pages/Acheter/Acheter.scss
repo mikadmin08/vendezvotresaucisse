@@ -1,0 +1,55 @@
+.acheter-container {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.acheter-aside {
+  position: sticky;
+  top: 0;
+}
+
+.acheter-search {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.acheter-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.acheter-item img {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.acheter-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.acheter-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.acheter-item-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.acheter-item-description {
+  color: #666;
+}

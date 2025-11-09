@@ -3,200 +3,293 @@ $primary-color: #e87524;
 $secondary-color: #f8f9fc;
 
 @font-face {
-  font-family: "Roobert";
-  src: url("./assets/fonts/RoobertTRIALVF-BF67243fd545701.ttf");
+    font-family: "Roobert";
+    src: url("./assets/fonts/RoobertTRIALVF-BF67243fd545701.ttf");
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Roobert", "Courier New", Courier, monospace;
+    margin: 0;
+    padding: 0;
+    font-family: "Roobert", "Courier New", Courier, monospace;
 }
 
 #root {
-  min-height: 100svh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+    min-height: 100svh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
-#root > header,
-#root > .header {
-  grid-row: 1;
+#root>header,
+#root>.header {
+    grid-row: 1;
 }
-#root > main {
-  grid-row: 2;
-  min-height: 0;
+
+#root>main {
+    grid-row: 2;
+    min-height: 0;
 }
-#root > footer,
-#root > .footer {
-  grid-row: 3;
+
+#root>footer,
+#root>.footer {
+    grid-row: 3;
 }
 
 main {
-  min-height: 0; // prend la place dispo
+    min-height: 0; // prend la place dispo
 }
 
 html,
 body {
-  height: 100%;
+    height: 100%;
+}
+
+.suggestion-container {
+    background-color: $headerbg;
+}
+
+.reason-to-sell-saucisse-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding: 4rem 0;
+    width: 70%;
+    margin: auto;
+}
+
+.reason-card {
+    width: 35rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.reason-title {
+    text-align: center;
+    color: $secondary-color;
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+
+.howtosell-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2);
+    grid-column-gap: 4rem;
+    grid-row-gap: 0rem;
+    text-align: center;
+}
+
+.howtosell-list {
+    list-style-type: none;
+    text-decoration: none;
+    text-align: start;
 }
 
 .home-container {
-  & h4 {
-    padding: 0;
-    margin: 0;
-  }
-
-  & h1 {
-    padding: 0;
-    margin: 0;
-  }
-
-  & ul li {
-    margin: 0 !important;
-    padding: 0;
-  }
-
-  .suggestion {
-    width: 50rem;
-    margin: auto;
-
-    &.title {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      color: $headerbg;
-      text-align: center;
+    & h4 {
+        padding: 0;
+        margin: 0;
     }
 
-    .p-carousel-prev,
-    .p-carousel-next {
-      display: none !important;
-    }
-  }
-
-  .top-blue-saucisse-container {
-    background-color: $headerbg;
-    display: flex;
-    flex-direction: column;
-    padding-left: 200px;
-    padding-bottom: 10rem;
-  }
-
-  .saucisse-home {
-    &.saucisse-size {
-      text-align: center;
-
-      &.saucisse-selected {
-        display: flex;
-        justify-content: center;
-        gap: 4rem;
-        padding: 1rem;
-      }
+    & h1 {
+        padding: 0;
+        margin: 0;
     }
 
-    &.button-validation {
-      margin-top: 1rem;
+    & ul li {
+        margin: 0 !important;
+        padding: 0;
     }
 
-    &.caca {
-      position: relative;
-      top: -100px;
-    }
-
-    &.title {
-      margin-top: 40px;
-      font-size: 48px;
-      text-align: left;
-      color: $secondary-color;
-    }
-
-    &.list {
-      color: $secondary-color;
-      font-size: 32px;
-      list-style-type: none;
-      padding-inline-start: 0px;
-
-      & li i {
-        font-size: 32px;
-        padding: 1rem;
-      }
-    }
-
-    &.hero {
-      display: flex;
-      justify-content: left;
-      align-items: center;
-    }
-
-    &.card {
-      width: 70rem;
-      margin: auto;
-      color: $headerbg;
-
-      &.card-body {
-        width: 30rem;
+    .suggestion {
+        width: 50rem;
         margin: auto;
+
+        &.title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: $headerbg;
+            text-align: center;
+        }
+
+        .p-carousel-prev,
+        .p-carousel-next {
+            display: none !important;
+        }
+    }
+
+    .top-blue-saucisse-container {
+        background-color: $headerbg;
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
-      }
+        padding-left: 200px;
+        padding-bottom: 10rem;
     }
 
-    &.estimation-result {
-      text-align: justify;
-      font-size: 1rem;
-      color: $headerbg;
-    }
-  }
+    @keyframes saucisseDrive {
+        0% {
+            transform: translateX(100vw) scaleX(1) rotate(0deg);
+            /* commence à droite */
+        }
 
-  .p-card-title {
-    font-size: 3rem;
-    text-align: center;
-    padding: 2rem;
-  }
+        25% {
+            transform: translateX(-75vw) scaleX(1) rotate(-3deg);
+        }
+
+        49% {
+            transform: translateX(-50vw) scaleX(1) rotate(0deg);
+        }
+
+        50% {
+            transform: translateX(-50vw) scaleX(-1) rotate(0deg);
+            /* flip instantané */
+        }
+
+        75% {
+            transform: translateX(-75vw) scaleX(-1) rotate(3deg);
+        }
+
+        100% {
+            transform: translateX(-100vw) scaleX(1) rotate(0deg);
+        }
+    }
+
+    .saucisse-loading {
+        animation: saucisseDrive 0.5s linear infinite;
+    }
+
+    .saucisse-home {
+        &.saucisse-loading-image {}
+
+        &.saucisse-size {
+            text-align: center;
+
+            &.saucisse-selected {
+                display: flex;
+                justify-content: center;
+                gap: 4rem;
+                padding: 1rem;
+            }
+        }
+
+        &.button-validation {
+            margin-top: 1rem;
+        }
+
+        &.caca {
+            position: relative;
+            top: -100px;
+        }
+
+        &.title {
+            margin-top: 40px;
+            font-size: 48px;
+            text-align: left;
+            color: $secondary-color;
+        }
+
+        &.list {
+            color: $secondary-color;
+            font-size: 32px;
+            list-style-type: none;
+            padding-inline-start: 0px;
+
+            & li i {
+                font-size: 32px;
+                padding: 1rem;
+            }
+        }
+
+        &.hero {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+
+        &.card {
+            width: 70rem;
+            margin: auto;
+            color: $headerbg;
+
+            &.card-body {
+                width: 30rem;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        &.estimation-result {
+            text-align: justify;
+            font-size: 1rem;
+            color: $headerbg;
+        }
+    }
+
+    .p-card-title {
+        font-size: 3rem;
+        text-align: center;
+        padding: 2rem;
+    }
+}
+
+.reviews-section {
+    width: 80rem;
+    margin: auto;
+}
+
+.review-container {
+    background-color: $headerbg;
+}
+
+.review-card {
+    margin-top: 3rem;
+    margin-left: 2rem;
 }
 
 .header {
-  background-color: $headerbg;
-  display: grid;
-  grid-template-columns: 30% 1fr 30%;
-  justify-content: center;
-  align-items: center;
-  height: 5vh;
-
-  img {
-    grid-area: 1 / 1 / 1 / 2;
-    justify-self: flex-end;
-    cursor: pointer;
-  }
-
-  .navigation {
-    display: flex;
+    background-color: $headerbg;
+    display: grid;
+    grid-template-columns: 30% 1fr 30%;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    & .nav {
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      background-color: transparent;
-      border: none;
-      color: #fff;
-      width: 15%;
-      text-decoration: none;
-      cursor: pointer;
-      border-top: 4px solid #0d4f78;
+    height: 5vh;
 
-      &:hover,
-      &.active {
-        background-color: #fff;
-        color: #e87524;
-        border-top: 4px solid #e87524;
-      }
+    img {
+        grid-area: 1 / 1 / 1 / 2;
+        justify-self: flex-end;
+        cursor: pointer;
     }
-  }
+
+    .navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        & .nav {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            width: 15%;
+            text-decoration: none;
+            cursor: pointer;
+            border-top: 4px solid #0d4f78;
+
+            &:hover,
+            &.active {
+                background-color: #fff;
+                color: #e87524;
+                border-top: 4px solid #e87524;
+            }
+        }
+    }
 }
 
 .footer {
@@ -207,91 +300,100 @@ body {
 
   & .footer-info {
     display: grid;
-    grid-template-columns: 10% 40% 40% 10%;
-    grid-template-rows: 20% 80%;
-    flex-direction: column;
+    grid-template-columns: 30vw 40vw 30vw;
+    background-color: #4a4a4a;
+    color: #fff;
 
-    & h3 {
-      grid-area: 1 / 2 / 2 / 3;
-      padding: 1rem 0;
-      margin: 0;
-    }
+    & .footer-info {
+        display: grid;
+        grid-template-columns: 10% 40% 40% 10%;
+        grid-template-rows: 20% 80%;
+        flex-direction: column;
 
-    & .liens {
-      grid-area: 2 / 2 / 3 / 4;
-      display: grid;
-      grid-template-columns: repeat(2, 50%);
-      justify-content: center;
-
-      & a {
-        text-decoration: none;
-        color: #fff;
-
-        &:hover {
-          text-decoration: underline;
+        & h3 {
+            grid-area: 1 / 2 / 2 / 3;
+            padding: 1rem 0;
+            margin: 0;
         }
-      }
 
-      & .site {
-        grid-area: 1 / 1 / 2 / 2;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-      }
+        & .liens {
+            grid-area: 2 / 2 / 3 / 4;
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            justify-content: center;
 
-      & .services {
-        grid-area: 1 / 2 / 2 / 3;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-      }
-    }
-  }
+            & a {
+                text-decoration: none;
+                color: #fff;
 
-  & .profile_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    & .profiledev {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
-
-      & img {
-        height: 4rem;
-        width: 4rem;
-        border: 3px solid #0d4f78;
-      }
-
-      @mixin text-outline($size: 2px, $color: #000) {
-        color: #fff;
-        $shadows: ();
-        @for $y from -$size through $size {
-          @for $x from -$size through $size {
-            @if not($x == 0 and $y == 0) {
-              $shadows: append($shadows, #{$x}px #{$y}px 0 $color, comma);
+                &:hover {
+                    text-decoration: underline;
+                }
             }
-          }
+
+            & .site {
+                grid-area: 1 / 1 / 2 / 2;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+
+            & .services {
+                grid-area: 1 / 2 / 2 / 3;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
         }
-        text-shadow: $shadows;
-      }
-
-      & span {
-        font-size: 1.8rem;
-        @include text-outline(1, #000); // 2px de contour noir
-      }
     }
-  }
 
-  & .logominia {
+    & .profile_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        & .profiledev {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+
+            & img {
+                height: 4rem;
+                width: 4rem;
+                border: 3px solid #0d4f78;
+            }
+
+            @mixin text-outline($size: 2px, $color: #000) {
+                color: #fff;
+                $shadows: (
+                );
+
+            @for $y from -$size through $size {
+                @for $x from -$size through $size {
+                    @if not($x ==0 and $y ==0) {
+                        $shadows: append($shadows, #{$x}px #{$y}px 0 $color, comma);
+                    }
+                }
+            }
+
+            text-shadow: $shadows;
+        }
+
+        & span {
+            font-size: 1.8rem;
+            @include text-outline(1, #000); // 2px de contour noir
+        }
+    }
+}
+
+& .logominia {
     display: flex;
     justify-content: center;
     align-items: center;
 
     & img {
-      height: 8rem;
+        height: 8rem;
     }
-  }
+}
 }
