@@ -79,7 +79,7 @@ body {
     text-align: center;
 }
 
-.howtosell-list{
+.howtosell-list {
     list-style-type: none;
     text-decoration: none;
     text-align: start;
@@ -126,7 +126,41 @@ body {
         padding-bottom: 10rem;
     }
 
+    @keyframes saucisseDrive {
+        0% {
+            transform: translateX(100vw) scaleX(1) rotate(0deg);
+            /* commence à droite */
+        }
+
+        25% {
+            transform: translateX(-75vw) scaleX(1) rotate(-3deg);
+        }
+
+        49% {
+            transform: translateX(-50vw) scaleX(1) rotate(0deg);
+        }
+
+        50% {
+            transform: translateX(-50vw) scaleX(-1) rotate(0deg);
+            /* flip instantané */
+        }
+
+        75% {
+            transform: translateX(-75vw) scaleX(-1) rotate(3deg);
+        }
+
+        100% {
+            transform: translateX(-100vw) scaleX(1) rotate(0deg);
+        }
+    }
+
+    .saucisse-loading {
+        animation: saucisseDrive 0.5s linear infinite;
+    }
+
     .saucisse-home {
+        &.saucisse-loading-image {}
+
         &.saucisse-size {
             text-align: center;
 

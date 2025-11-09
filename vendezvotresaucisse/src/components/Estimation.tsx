@@ -7,6 +7,7 @@ import { Rating } from "primereact/rating";
 import { Slider } from 'primereact/slider';
 import { Image } from 'primereact/image';
 import saucisseSize from '../assets/saucisse-size.png';
+import saucisseVoiture from '../assets/voituresaucisse.png';
 import { RadioButton } from 'primereact/radiobutton';
 import { GoogleGenAI } from "@google/genai";
 import './estimation.scss';
@@ -185,6 +186,10 @@ export default function Estimation() {
                 <span>Voté par 999999 Personnes</span>
             </form>}
 
+            {!isLoading && <div className='saucisse-home estimation-loading'>
+                <img width={200} src={saucisseVoiture} className='saucisse-loading'></img>
+                <h2>Estimation...</h2>
+            </div>}
             {hasResponse && <div className='saucisse-home estimation-result'>
                 <Button icon="pi pi-user" rounded outlined severity="info" aria-label="User" onClick={handleResetEstimation} />
                 <div style={{ whiteSpace: 'pre-wrap' }}>{estimationResult}</div>

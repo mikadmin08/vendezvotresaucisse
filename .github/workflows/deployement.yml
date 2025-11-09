@@ -27,8 +27,7 @@ jobs:
         working-directory: vendezvotresaucisse
         run: |
           npm run build
-          cp dist/index.html dist/404.html  # utile pour les routes React
-
+          
       - name: Upload build to VPS
         uses: appleboy/scp-action@v0.1.7
         with:
