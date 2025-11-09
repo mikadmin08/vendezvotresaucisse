@@ -9,7 +9,10 @@ type PromoToastProps = {
   onClose?: () => void; // callback après disparition complète
 };
 
-export const Pubs = ({ autoShowDelayMs = 0, onClose }: PromoToastProps) => {
+export const Pubs = ({
+  autoShowDelayMs = 300000,
+  onClose,
+}: PromoToastProps) => {
   const [visible, setVisible] = useState(autoShowDelayMs === 0);
   const [closing, setClosing] = useState(false);
   const closeTimer = useRef<number | null>(null);
