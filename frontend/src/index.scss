@@ -13,6 +13,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Roobert", "Courier New", Courier, monospace;
+    background-color: $secondary-color  ;
 }
 
 #root {
@@ -43,12 +44,21 @@ main {
 html,
 body {
     height: 100%;
+    overflow-x: hidden;
 }
 
 .suggestion-container {
     background-color: $headerbg;
 }
 
+.white-container{
+    background-color: $secondary-color;
+        color: $headerbg;
+}
+.blue-container{
+        background-color: $headerbg;
+        color: $secondary-color;
+}
 .reason-to-sell-saucisse-container {
     display: flex;
     justify-content: space-between;
@@ -67,7 +77,6 @@ body {
 
 .reason-title {
     text-align: center;
-    color: $secondary-color;
     font-size: 2rem;
     padding-top: 2rem;
 }
@@ -139,26 +148,18 @@ body {
         }
 
         49% {
-            transform: translateX(-50vw) scaleX(1) rotate(0deg);
-        }
-
-        50% {
-            transform: translateX(-50vw) scaleX(-1) rotate(0deg);
-            /* flip instantané */
-        }
-
-        75% {
-            transform: translateX(-75vw) scaleX(-1) rotate(3deg);
+            transform: translateX(-30vw) scaleX(1) rotate(0deg);
         }
 
         100% {
-            transform: translateX(-100vw) scaleX(1) rotate(0deg);
+            transform: translateX(-70vw) scaleX(1) rotate(0deg);
+            /* flip instantané */
         }
     }
 
     .saucisse-loading {
         overflow: hidden;
-        animation: saucisseDrive 0.5s linear infinite;
+        animation: saucisseDrive 1s linear infinite;
     }
 
     .saucisse-home {
@@ -168,8 +169,8 @@ body {
             &.saucisse-selected {
                 display: flex;
                 justify-content: center;
-                gap: 4rem;
-                padding: 1rem;
+                gap: 2rem;
+                margin-bottom: 2rem;
             }
         }
 
@@ -238,11 +239,11 @@ body {
 .reviews-section {
     width: 80rem;
     margin: auto;
+    h4{
+         text-align: center;
+    }
 }
 
-.review-container {
-    background-color: $headerbg;
-}
 
 .review-card {
     margin-top: 3rem;

@@ -112,11 +112,10 @@ export const Acheter = () => {
     }
 
     return (
-        <div className="acheter-container">
+        <div style={{padding:'1rem', display:'flex',justifyContent:'space-evenly', gap:'2rem'}}>
             <aside className="acheter-aside">
-                <h3>Recherche</h3>
+                <h3>Rechercher</h3>
                 <span className="p-input-icon-left acheter-search">
-                    <i className="pi pi-search" />
                     <InputText
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
@@ -154,12 +153,9 @@ export const Acheter = () => {
                     </div>
                 </div>
 
-                <div style={{ marginTop: 12 }}>
-                    <DataViewLayoutOptions layout={layout} onChange={(e) => setLayout(e.value as any)} />
-                </div>
             </aside>
 
-            <section>
+            <section style={{width:'100%'}}>
                 <DataView
                     value={filtered}
                     itemTemplate={itemTemplate}

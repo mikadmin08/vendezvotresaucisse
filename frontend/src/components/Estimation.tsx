@@ -21,6 +21,7 @@ export default function Estimation() {
     const [selectOrigine, setSelectOrigine] = useState(null);
     const [selectType, setSelectType] = useState(null);
     const [estimationResult, setEstimationResult] = useState<string | null>(null);
+    const [isWavy, setIsWavy] = useState(true);
 
     const meats = [
         { name: 'Porc', code: 'PORC' },
@@ -123,12 +124,12 @@ export default function Estimation() {
         setEstimationResult(null);
     }
 
+
     return (
         <Card className='saucisse-home card' title="Entrez les informations de votre saucisse et découvrez-le !">
             <Toast ref={toast} position="center" />
 
             {!hasResponse && !isLoading && <form onSubmit={handleEstimationSaucisse} className="saucisse-home card card-body">
-                <h4>Taille de votre saucisse</h4>
                 <div className='saucisse-home'>
                     <div className="saucisse-home saucisse-size" style={{ overflow: 'visible', position: 'relative' }}>
                         <div className='saucisse-home saucisse-size saucisse-selected'>
@@ -173,21 +174,18 @@ export default function Estimation() {
                             alt="saucisse"
                             width={String(value)}
                             height="100"
-                            imageStyle={{ maxWidth: 'none', maxHeight: '100', display: 'block', position: 'relative', left: '50%', transform: 'translateX(-50%)' }}
+                            imageStyle={{ maxWidth: 'none', maxHeight: '100', display: 'block', position: 'relative', left: '50%', transform: 'translateX(-50%)',marginTop:'1rem',marginBottom:'1rem' }}
                         />
                     </div>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', gap: '2rem', marginRight: '2rem' }}>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                        <label htmlFor="Viande">Viande</label>
-                        <Dropdown value={selectMeat} onChange={(e) => setSelectedMeat(e.value)} options={meats} optionLabel="name" name='viande' placeholder="Selectionne t'as viande" className="dropdown" />
+                <div style={{ display: 'flex', justifyContent: 'space-between', gap: '2rem'}}>
+                    <div>
+                        <Dropdown style={{ width: '12rem' }} value={selectMeat} onChange={(e) => setSelectedMeat(e.value)} options={meats} optionLabel="name" name='viande' placeholder="Selectionne t'as viande" className="dropdown" />
                     </div>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                        <label htmlFor="Type">Type</label>
-                        <Dropdown value={selectType} onChange={(e) => setSelectType(e.value)} options={types} optionLabel="name" name='type' placeholder="Selectionne un type" className="dropdown" />
+                    <div>
+                        <Dropdown style={{ width: '12rem' }} value={selectType} onChange={(e) => setSelectType(e.value)} options={types} optionLabel="name" name='type' placeholder="Selectionne un type" className="dropdown" />
                     </div>
                 </div>
-                <label htmlFor="Origine">Origine</label>
                 <Dropdown value={selectOrigine} onChange={(e) => setSelectOrigine(e.value)} options={origines} optionLabel="name" name='origine' placeholder="l'origine" className="dropdown" />
 
                 <Button
@@ -196,9 +194,6 @@ export default function Estimation() {
                     className="saucisse-home button-validation"
                     label="J'estime ma saucisse">
                 </Button>
-                <label htmlFor="élue le meilleur dans l'estimation depuis 2025"></label>
-                <Rating value={10} stars={10} cancel={false} />
-                <span>Voté par 999999 Personnes</span>
             </form>}
 
             {isLoading && <div className='saucisse-home estimation-loading'>
@@ -206,8 +201,23 @@ export default function Estimation() {
                 <h2>Estimation...</h2>
             </div>}
             {hasResponse && <div className='saucisse-home estimation-result'>
-                <Button icon="pi pi-user" rounded outlined severity="info" aria-label="User" onClick={handleResetEstimation} />
-                <div style={{ whiteSpace: 'pre-wrap' }}>{estimationResult}</div>
+                <div style={{ textAlign: 'end' }}>
+                    <Button
+                        label={isWavy ? "Désactiver effet" : "Activer effet"}
+                        icon="pi pi-sparkles"
+                        severity="info"
+                        text
+                        onClick={() => setIsWavy(!isWavy)}
+                    />
+                    <Button icon="pi pi-trash" rounded outlined severity="danger" aria-label="User" label='Reinitialiser' onClick={handleResetEstimation} />
+
+                </div>
+                <div
+                    style={{ whiteSpace: "pre-wrap" }}
+                    className={isWavy ? "wavy-text" : ""}
+                >
+                    {estimationResult}
+                </div>
             </div>
             }
         </Card>

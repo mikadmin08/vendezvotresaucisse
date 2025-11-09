@@ -29,7 +29,6 @@ export const Home = () => {
                     <Suggestion />
                 </div>
             </section>
-            <Divider />
         </div>
     )
 }

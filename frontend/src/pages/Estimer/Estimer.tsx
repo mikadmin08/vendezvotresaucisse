@@ -13,15 +13,15 @@ export const Estimer = () => {
             </div>
 
             <Divider />
-            <section className="review-container">
+            <section className="blue-container">
                 <ReviewCard />
             </section>
             <Divider />
-            <section className="review-container">
+            <section className="white-container">
                 <ReasonToSellSaucisse />
             </section>
-
-            <section className="">
+            <Divider />
+            <section className="blue-container">
 
                 <HowToSellSaucisse />
             </section>

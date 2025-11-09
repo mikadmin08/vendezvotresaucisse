@@ -96,6 +96,7 @@ export default function ReviewCard({
 
   return (
     <div className="reviews-section" aria-label={title}>
+    <h4 style={{fontSize:'2rem', padding:0, margin:0}}>Deja des clients satisfait !</h4>
       <Carousel
         value={reviews}
         itemTemplate={itemTemplate}
