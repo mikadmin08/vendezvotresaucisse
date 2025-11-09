@@ -22,20 +22,17 @@ export default function TwitchLiveBadge({
   endpoint?: string;
 }) {
   const [data, setData] = useState<TwitchStatus | null>(null);
-  const [err, setErr] = useState<string | null>(null);
 
   async function fetchStatus(abort?: AbortSignal) {
     try {
-      setErr(null);
       const url = new URL(endpoint, window.location.origin);
       url.searchParams.set("login", channelLogin);
       const res = await fetch(url.toString(), { signal: abort });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const json = await res.json();
-      console.log("[UI] twitch status", json); // <-- vois-tu live:true ici ?
       setData(json);
     } catch (e: any) {
-      if (e?.name !== "AbortError") setErr(e.message ?? "fetch_error");
+      if (e?.name !== "AbortError") console.error(e.message ?? "fetch_error");
     }
   }
 
