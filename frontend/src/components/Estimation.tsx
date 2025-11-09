@@ -124,7 +124,6 @@ export default function Estimation() {
         setEstimationResult(null);
     }
 
-
     return (
         <Card className='saucisse-home card' title="Entrez les informations de votre saucisse et découvrez-le !">
             <Toast ref={toast} position="center" />
@@ -212,7 +211,7 @@ export default function Estimation() {
                     <Button icon="pi pi-trash" rounded outlined severity="danger" aria-label="User" label='Reinitialiser' onClick={handleResetEstimation} />
 
                 </div>
-                <div
+  <div
                     style={{ whiteSpace: "pre-wrap" }}
                     className={isWavy ? "wavy-text" : ""}
                 >

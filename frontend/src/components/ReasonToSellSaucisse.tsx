@@ -14,25 +14,25 @@ export default function ReasonToSellSaucisse() {
                 <Card className="reason-card">
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                         <img style={{ width: '4rem', marginTop: '-2rem' }} src={saucebbq} alt="illustration" />
-                        <p style={{ margin: 0 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam inventore praesentium at libero, soluta autem possimus quos consequatur asperiores! Vel culpa voluptas, unde tempore dolor aut ipsa totam et eligendi.</p>
+                        <strong style={{ margin: 0 }}>Pas besoin d’un diplôme en charcuterie pour briller ici. Tu cliques, tu rigoles, et ta saucisse vaut soudain plus qu’un NFT en 2021.</strong>
                     </div>
                 </Card>
                 <Card className="reason-card">
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                         <img style={{ width: '4rem', marginTop: '-2rem' }} src={hotdogIcon} alt="illustration" />
-                        <p style={{ margin: 0 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam inventore praesentium at libero, soluta autem possimus quos consequatur asperiores! Vel culpa voluptas, unde tempore dolor aut ipsa totam et eligendi.</p>
+                        <strong style={{ margin: 0 }}>Zéro stress, zéro paperasse. Juste toi, ta saucisse et trois clics magiques. Même ta grand-mère pourrait le faire (et elle le fera).</strong>
                     </div>
                 </Card>
                 <Card className="reason-card">
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                         <img style={{ width: '4rem',marginTop: '-2rem' }} src={saucisseicon} alt="illustration" />
-                        <p style={{ margin: 0 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam inventore praesentium at libero, soluta autem possimus quos consequatur asperiores! Vel culpa voluptas, unde tempore dolor aut ipsa totam et eligendi.</p>
+                        <strong style={{ margin: 0 }}>Ici, pas de jugement. Que ta saucisse soit géante, mini, ou végétarienne, on la respecte. Good vibes only, même pour les chipos.</strong>
                     </div>
                 </Card>
                 <Card className="reason-card">
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                         <img style={{ width: '4rem',marginTop: '-2rem' }} src={saucissefork} alt="illustration" />
-                        <p style={{ margin: 0 }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam inventore praesentium at libero, soluta autem possimus quos consequatur asperiores! Vel culpa voluptas, unde tempore dolor aut ipsa totam et eligendi.</p>
+                        <strong style={{ margin: 0 }}>En moins de temps qu’il faut pour retourner une knacki, t’as déjà ton estimation. Efficace, croustillant, et un peu débile — juste comme on aime.</strong>
                     </div>
                 </Card>
             </div>

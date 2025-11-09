@@ -24,49 +24,55 @@ type Props = {
 };
 
 const defaultReviews: Review[] = [
-  { name: "Clara", avatar: Clara, rating: 5, comment: "Caca proute" },
+  {
+    name: "Clara",
+    avatar: Clara,
+    rating: 5,
+    comment: "J’ai vendu ma saucisse plus vite que mon ex m’a ghostée. Service 10/10.",
+  },
   {
     name: "Knight",
     avatar: Knight,
-    rating: 4,
-    comment: "Très pratique, j'ai obtenu un prix en 2 minutes.",
+    rating: 5,
+    comment: "J’ai quitté mon montage vidéo pour ça… et je regrette pas. Site validé par la chevalerie charcutière.",
   },
   {
     name: "ResidentMaiden",
     avatar: ResidentMaiden,
     rating: 5,
-    comment: "Interface claire, super expérience.",
+    comment: "Claire, rapide, j’ai cliqué trois fois et boum : saucisse vendue. Même ma daronne a applaudi.",
   },
   {
     name: "Samano",
     avatar: Samano,
-    rating: 4,
-    comment: "Bon accompagnement du début à la fin.",
+    rating: 0,
+    comment: "Petit bug : ma saucisse était trop grosse, le site a crashé.",
   },
   {
     name: "Stachlord",
     avatar: Stachlord,
     rating: 5,
-    comment: "Ravie du résultat, rapide et efficace !",
+    comment: "Ma moustache frétille encore. Le marché de la saucisse n’a jamais été aussi stylé.",
   },
   {
     name: "Val",
     avatar: Vald,
     rating: 5,
-    comment: "Ravie du résultat, rapide et efficace !",
+    comment: "Ce site m’a redonné foi en l’humanité. Et en la charcuterie artisanale. Ajouter moi sur LOL",
   },
   {
     name: "Zerator",
     avatar: Zerator,
     rating: 5,
-    comment: "Ravie du résultat, rapide et efficace !",
+    comment: "J’ai speedrunné la vente de ma saucisse. Nouveau record personnel : 32 secondes.",
   },
   {
     name: "Yunaleka",
     avatar: Yunaleka,
     rating: 5,
-    comment: "Ravie du résultat, rapide et efficace !",
+    comment: "J’ai cliqué pour la blague, j’suis restée pour le design. Ce site est une pépite croustillante.",
   },
+
 ];
 
 const responsiveOptions = [
@@ -96,7 +102,7 @@ export default function ReviewCard({
 
   return (
     <div className="reviews-section" aria-label={title}>
-    <h4 style={{fontSize:'2rem', padding:0, margin:0}}>Deja des clients satisfait !</h4>
+      <h4 style={{ fontSize: '2rem', padding: 0, margin: 0 }}>Deja des clients satisfait !</h4>
       <Carousel
         value={reviews}
         itemTemplate={itemTemplate}

@@ -97,7 +97,7 @@ export const Acheter = () => {
                 <img src={item.image} alt={item.title} />
                 <div className="acheter-item-content">
                     <div className="acheter-item-header">
-                        <strong className="acheter-item-title">{item.title}</strong>
+                        <h4 className="acheter-item-title">{item.title}</h4>
                         <Tag value={`${item.price.toFixed(2)} €`} severity="warning" />
                     </div>
                     <span className="acheter-item-description">{item.description}</span>
