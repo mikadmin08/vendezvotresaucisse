@@ -18,8 +18,6 @@ export const Header = () => {
     setScreen(scr);
   }, []);
 
-  // https://www.twitch.tv/savun
-
   return (
     <div className="header">
       <img onClick={() => handleScreen("/")} src={Logo} alt="logo" />
@@ -52,7 +50,7 @@ export const Header = () => {
         >
           A propos
         </Link>
-        <TwitchLiveBadgeFront channelLogin="monstercat" refreshMs={30_000} />
+        <TwitchLiveBadgeFront channelLogin="benzaie" />
       </div>
     </div>
   );
