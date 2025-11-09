@@ -1,3 +1,5 @@
+@use "sass:list";
+
 $headerbg: #0d4f78;
 $primary-color: #e87524;
 $secondary-color: #f8f9fc;
@@ -369,7 +371,11 @@ body {
           @for $y from -$size through $size {
             @for $x from -$size through $size {
               @if not($x ==0 and $y ==0) {
-                $shadows: append($shadows, #{$x}px #{$y}px 0 $color, comma);
+                $shadows: list.append(
+                  $shadows,
+                  #{$x}px #{$y}px 0 $color,
+                  $separator: comma
+                );
               }
             }
           }

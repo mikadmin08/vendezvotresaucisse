@@ -3,7 +3,7 @@ WORKDIR /api
 
 # Manifests d'abord pour cache des deps
 COPY package*.json ./
-RUN npm ci --omit=dev
+RUN npm ci
 
 # Code de l'API
 COPY . .

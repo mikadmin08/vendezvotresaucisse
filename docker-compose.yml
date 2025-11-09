@@ -1,11 +1,10 @@
-version: "3.9"
-
 services:
   api:
     build:
       context: ./api
       dockerfile: Dockerfile
-    command: ["npm", "run", "start"]  # doit lancer server.js
+    command: ["npm", "run", "start"]
+    image: khouma48439/vendezvotresaucisse:api-latest
     environment:
       NODE_ENV: production
       PORT: 3001
@@ -19,7 +18,8 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
       args:
-        BUILD_DIR: build  # si vous utilisez Vite, mettez "dist"
+        BUILD_DIR: build
+    image: khouma48439/vendezvotresaucisse:web-latest
     expose:
       - "80"
     depends_on:
