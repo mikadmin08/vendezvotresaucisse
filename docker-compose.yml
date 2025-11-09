@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    command: ["npm", "run", "start"]  # doit lancer server.js
+    environment:
+      NODE_ENV: production
+      PORT: 3001
+    expose:
+      - "3001"
+    networks:
+      - web
+
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        BUILD_DIR: build  # si vous utilisez Vite, mettez "dist"
+    expose:
+      - "80"
+    depends_on:
+      - api
+    networks:
+      - web
+
+networks:
+  web:
+    driver: bridge
+    external: true
