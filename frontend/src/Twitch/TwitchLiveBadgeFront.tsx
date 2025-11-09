@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import LiveDot from "../components/LiveIcon/LiveDot";
+import "./index.scss";
 
 type TwitchStatus = {
   live: boolean;
@@ -51,34 +52,32 @@ export default function TwitchLiveBadge({
   const live = !!data?.live;
 
   return (
-    <div className="flex items-center gap-3 p-3 rounded-2xl shadow-sm border">
-      <div className="min-w-0">
-        <div className="flex items-center gap-2">
-          <span
-            className={`inline-block w-3 h-3 rounded-full ${
-              live ? "bg-green-500 animate-pulse" : "bg-gray-400"
-            }`}
-          >
-            {live ? "En ligne" : "Hors ligne"}
-            <LiveDot live={live} />
-          </span>
+    <div className="badge-twitch-container">
+      <div className="badge-twitch-body">
+        <div className="online">
+          {live && <img src={data.profile_image_url} alt="imageprofile" />}
+          <div className="online-info">
+            {live && data.login}
+            <div className="online-status">
+              <span>{live ? "ONLINE" : "OFFLINE"}</span>
+              <LiveDot live={live} />
+            </div>
+          </div>
         </div>
 
         {live && (
-          <div className="text-sm text-gray-700">
-            <span className="font-medium">{data?.viewer_count ?? 0}</span>{" "}
-            spectateur(s)
+          <div className="stream-info">
+            <div className="viewers">
+              <i className="pi pi-eye" style={{ fontSize: "1rem" }}></i>
+              <span>{data?.viewer_count ?? 0}</span>
+            </div>
             {data?.game_name ? (
-              <>
-                {" "}
-                • Catégorie :{" "}
-                <span className="font-medium">{data.game_name}</span>
-              </>
+              <span>
+                Catégorie : <span>{data.game_name}</span>
+              </span>
             ) : null}
           </div>
         )}
-
-        {err && <div className="text-xs text-red-500 mt-1">Erreur: {err}</div>}
       </div>
     </div>
   );

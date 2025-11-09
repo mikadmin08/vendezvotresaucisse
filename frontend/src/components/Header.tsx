@@ -50,8 +50,8 @@ export const Header = () => {
         >
           A propos
         </Link>
-        <TwitchLiveBadgeFront channelLogin="benzaie" />
       </div>
+      <TwitchLiveBadgeFront channelLogin="eoscall__" />
     </div>
   );
 };

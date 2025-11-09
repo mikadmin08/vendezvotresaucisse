@@ -4,37 +4,22 @@
   width: 14px;
   height: 14px;
   border-radius: 9999px;
-  background: #000; // rond noir de base
-  vertical-align: middle;
+  background: #000;
+  margin-left: 0.2rem;
 }
 
 /* anneau rouge qui clignote UNIQUEMENT quand live */
-.live-dot.is-live::after {
-  content: "";
-  position: absolute;
-  inset: -3px; // plus grand que le rond noir
+.live-dot.is-live {
   border-radius: 9999px;
-  border: 2px solid #ef4444; // anneau rouge
-  opacity: 0;
-  animation: blink-red 900ms steps(1, end) infinite;
-  pointer-events: none;
+  background-color: #ef4444;
+  animation: pulse-animation 2s infinite;
 }
 
-@keyframes blink-red {
-  0%,
-  49% {
-    opacity: 0;
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
   }
-  50%,
   100% {
-    opacity: 1;
-  }
-}
-
-/* si l’utilisateur préfère moins d’animations, on coupe */
-@media (prefers-reduced-motion: reduce) {
-  .live-dot.is-live::after {
-    animation: none;
-    opacity: 1;
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
   }
 }
