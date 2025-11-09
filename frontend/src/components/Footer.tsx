@@ -26,9 +26,9 @@ export const Footer = () => {
             <h4>vendezvotresaucisse.fr</h4>
             <ul>
               {/* TODO: Faire la page Avis */}
-              <li>
+              {/* <li>
                 <Link to="avis">Avis</Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="faq" onClick={() => navigate("/faq")}>
                   Questions trop fréquentes
