@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import type { FormEvent } from 'react'
 import { Card } from 'primereact/card';
 import { Dropdown } from 'primereact/dropdown';
@@ -11,9 +11,10 @@ import saucisseVoiture from '../assets/voituresaucisse.png';
 import { RadioButton } from 'primereact/radiobutton';
 import { GoogleGenAI } from "@google/genai";
 import './estimation.scss';
+import { Toast } from 'primereact/toast';
 
 export default function Estimation() {
-
+    const toast = useRef<Toast>(null);
     const [isLoading, setIsloading] = useState(false);
     const [hasResponse, setHasResponse] = useState(false);
     const [selectMeat, setSelectedMeat] = useState(null);
@@ -60,7 +61,6 @@ export default function Estimation() {
     async function handleEstimationSaucisse(e: FormEvent<HTMLFormElement>) {
         e.preventDefault();
         setIsloading(true);
-        console.log('estimation')
 
         const apiKey = (import.meta.env.GEMINI_KEY);
         const ai = new GoogleGenAI({ apiKey });
@@ -72,7 +72,7 @@ export default function Estimation() {
         - Utilise les données fournies (taille, viande, type, origine).
         - Donne un prix estimatif, une fourchette, et 2-3 facteurs d'influence.
         - Retourne aussi une note de qualité sur 10.
-        - Ne parle pas de la t aille en pixel mais en diamètre en cm.
+        - Ne parle pas de la taille en pixel mais en diamètre en cm.
         - Soit drole sans etre cringe `;
 
         const meatLabel = (selectMeat as any)?.name ?? '—';
@@ -87,22 +87,35 @@ export default function Estimation() {
 
         Objectif: propose une estimation de prix et une courte explication.`;
 
-        const response = await ai.models.generateContent({
-            model: "gemini-2.5-flash",
-            contents: [
-                { role: 'model', parts: [{ text: systemPrompt }] },
-                { role: 'user', parts: [{ text: userPrompt }] },
-            ],
-            config: {
-                temperature: 0.7,
-            }
-        });
+        try {
+            const response = await ai.models.generateContent({
+                model: "gemini-2.5-flash",
+                contents: [
+                    { role: 'model', parts: [{ text: systemPrompt }] },
+                    { role: 'user', parts: [{ text: userPrompt }] },
+                ],
+                config: {
+                    temperature: 0.7,
+                }
+            });
 
-        // Store the model response so it can be rendered
-        setEstimationResult((response as any)?.text ?? String(response));
-        setHasResponse(true);
-        setIsloading(false);
-        console.log(response.text);
+            // Store the model response so it can be rendered
+            setEstimationResult((response as any)?.text ?? String(response));
+            setHasResponse(true);
+            setIsloading(false);
+
+        } catch (error) {
+            toast.current?.show({
+                severity: "error",
+                summary: "Estimation en vacances 🏖️",
+                detail: "Le moteur d’estimation fait une sieste. Réessaie plus tard !",
+                life: 5000,
+            });
+
+            setEstimationResult("");
+            setHasResponse(false);
+        }
+
     }
 
     async function handleResetEstimation() {
@@ -112,6 +125,8 @@ export default function Estimation() {
 
     return (
         <Card className='saucisse-home card' title="Entrez les informations de votre saucisse et découvrez-le !">
+            <Toast ref={toast} position="center" />
+
             {!hasResponse && !isLoading && <form onSubmit={handleEstimationSaucisse} className="saucisse-home card card-body">
                 <h4>Taille de votre saucisse</h4>
                 <div className='saucisse-home'>
