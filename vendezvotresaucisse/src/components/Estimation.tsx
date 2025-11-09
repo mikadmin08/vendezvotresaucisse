@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useState } from 'react'
 import type { FormEvent } from 'react'
 import { Card } from 'primereact/card';
 import { Dropdown } from 'primereact/dropdown';
@@ -9,6 +9,7 @@ import { Image } from 'primereact/image';
 import saucisseSize from '../assets/saucisse-size.png';
 import { RadioButton } from 'primereact/radiobutton';
 import { GoogleGenAI } from "@google/genai";
+import './estimation.scss';
 
 export default function Estimation() {
 
