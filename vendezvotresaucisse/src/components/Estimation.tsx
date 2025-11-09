@@ -186,7 +186,7 @@ export default function Estimation() {
             </form>}
 
             {hasResponse && <div className='saucisse-home estimation-result'>
-                <Button icon="pi pi-user" rounded outlined severity="info" aria-label="User" />
+                <Button icon="pi pi-user" rounded outlined severity="info" aria-label="User" onClick={handleResetEstimation} />
                 <div style={{ whiteSpace: 'pre-wrap' }}>{estimationResult}</div>
             </div>
             }
