@@ -10,10 +10,11 @@ export const Propos = () => {
         <p>
           Ce site est une parodie du site <span>vendezvotrevoiture.fr</span>.
           <br />
-          Cela prends place au sein de la communauté de la streameuse de
-          EosCall__, qui permet à ses viewers, en échange de points de chaine,
-          de diffuser de fausses pubs. Parmi celles-ci, une en particulier fait
-          référence au site original remplacant les voitures par des saucisses.
+          Ce projet s’inscrit dans la communauté de la streameuse EosCall__, où
+          les spectateurs, via leurs points de chaîne, peuvent déclencher la
+          diffusion de fausses publicités. L’une d’elles fait explicitement
+          référence au site d’origine en substituant les voitures par des
+          saucisses.
         </p>
       </section>
       <section className="streamer">

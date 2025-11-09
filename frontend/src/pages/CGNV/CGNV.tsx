@@ -16,19 +16,17 @@ export const CGNV = () => {
           </li>
           <li>
             Les retours sont acceptés si le colis n’a pas été ouvert, goûté,
-            senti, pris en photo ou raconté à votre chat.
+            senti, pris en photo ou mordu par votre chat.
           </li>
           <li>
-            Le support client répond plus vite si vous joignez un mème de
-            qualité exceptionnelle.
+            Le support client répond plus vite si vous joignez un chèque
+            conséquent.
           </li>
           <li>
             Les prix peuvent varier selon la phase de la lune, la météo et
             l’humeur du développeur.
           </li>
-          <li>
-            En cas de litige, on fait pile ou face (meilleure de 3, évidemment).
-          </li>
+          <li>En cas de litige, on fait pile ou face (BO 3, évidemment).</li>
         </ul>
       </div>
     </div>
