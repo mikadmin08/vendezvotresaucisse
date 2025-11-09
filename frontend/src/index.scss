@@ -404,10 +404,9 @@ text-shadow: $shadows;
         align-items: center;
         justify-content: center;
 
-        & img {
-          height: 4rem;
-          width: 4rem;
-          border: 3px solid #0d4f78;
+        img {
+            max-width: 140px;
+            height: auto;
         }
     }
 
@@ -423,23 +422,6 @@ text-shadow: $shadows;
                 "site"
                 "services";
             grid-template-columns: 1fr;
-        @mixin text-outline($size: 2px, $color: #000) {
-          color: #fff;
-          $shadows: ();
-
-          @for $y from -$size through $size {
-            @for $x from -$size through $size {
-              @if not($x ==0 and $y ==0) {
-                $shadows: list.append(
-                  $shadows,
-                  #{$x}px #{$y}px 0 $color,
-                  $separator: comma
-                );
-              }
-            }
-          }
-
-          text-shadow: $shadows;
         }
 
         .profile_container {
@@ -451,5 +433,4 @@ text-shadow: $shadows;
             order: 3;
         }
     }
-}
 }
