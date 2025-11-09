@@ -112,7 +112,7 @@ export default function Estimation() {
 
     return (
         <Card className='saucisse-home card' title="Entrez les informations de votre saucisse et découvrez-le !">
-            {!hasResponse && <form onSubmit={handleEstimationSaucisse} className="saucisse-home card card-body">
+            {!hasResponse && !isLoading && <form onSubmit={handleEstimationSaucisse} className="saucisse-home card card-body">
                 <h4>Taille de votre saucisse</h4>
                 <div className='saucisse-home'>
                     <div className="saucisse-home saucisse-size" style={{ overflow: 'visible', position: 'relative' }}>
@@ -186,7 +186,7 @@ export default function Estimation() {
                 <span>Voté par 999999 Personnes</span>
             </form>}
 
-            {!isLoading && <div className='saucisse-home estimation-loading'>
+            {isLoading && <div className='saucisse-home estimation-loading'>
                 <img width={200} src={saucisseVoiture} className='saucisse-loading'></img>
                 <h2>Estimation...</h2>
             </div>}
