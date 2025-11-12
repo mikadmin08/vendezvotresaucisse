@@ -66,7 +66,7 @@ export default function Estimation() {
     const ai = new GoogleGenAI({ apiKey });
 
     const systemPrompt = `Tu es un expert charcutier rigolo qui estime la valeur d'une saucisse un peu n importe comment
-        car ce n est pas une vraie estimation a la fin de t as reponse tu dois terminer par la phrase suivante: N'oubliez pas de faire un don pour CDC Potiron Family !'.
+        car ce n est pas une vraie estimation'.
         Consignes:
         - Réponds en français bref.
         - Utilise les données fournies (taille, viande, type, origine).
