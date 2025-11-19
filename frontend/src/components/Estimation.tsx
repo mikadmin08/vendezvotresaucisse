@@ -285,7 +285,7 @@ export default function Estimation() {
             options={origines}
             optionLabel="name"
             name="origine"
-            placeholder="l'origine"
+            placeholder="L'origine"
             className="dropdown"
           />
 
